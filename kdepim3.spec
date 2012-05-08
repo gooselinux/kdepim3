@@ -2,7 +2,7 @@
 Name:    kdepim3
 Summary: Compatibility support for kdepim3 
 Version: 3.5.10
-Release: 3%{?dist}
+Release: 3%{?dist}.goose.1
 
 License: GPLv2
 Group:   Applications/Productivity
@@ -21,6 +21,7 @@ BuildRequires: python-devel
 ## Crypto Stuff from http://kmail.kde.org/kmail-pgpmime-howto.html
 BuildRequires: gpgme-devel
 BuildRequires: libXpm-devel libXScrnSaver-devel
+BuildRequires: gcc-c++
 
 %description
 %{summary}, including libkcal.
@@ -119,6 +120,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon May 7 2012 Clint Savage <herlo@gooseproject.org> - 3.5.10-3.goose.1
+- BR of gcc-c++ is needed
+
 * Tue Jan 12 2010 Radek Novacek <rnovacek@redhat.com> - 3.5.10-3
 - Fixed wrong usage of macro in description.
 
